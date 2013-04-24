@@ -3,65 +3,65 @@
 <plist version="1.0">
 <dict>
 	<key>Underlying Window Color</key>
-	<string>#000</string>
+	<string>#002b36</string>
 	<key>Server List</key>
 	<dict>
 		<key>Text Font Style</key>
-		<string>Lucida Grande</string>
+		<string>Helvetica Neue</string>
 		<key>Text Font Size</key>
-		<integer>11</integer>
+		<integer>13</integer>
 		<key>Background Color</key>
-		<string>#1c1c1c</string>
+		<string>#002b36</string>
 		<key>Highlight Color</key>
-		<string>#007f00</string>
+		<string>#d33682</string>
 		<key>New Private Message Color</key>
-		<string>#699fcf</string>
+		<string>#d33682</string>
 		<key>Unread Color</key>
-		<string>#699fcf</string>
+		<string>#6c71c4</string>
 		<key>Active Color</key>
-		<string>#808080</string>
+		<string>#839496</string>
 		<key>Inactive Color</key>
-		<string>#ccc</string>
+		<string>#586e75</string>
 		<key>Active Color (Selected)</key>
-		<string>#cfbc99</string>
+		<string>#839496</string>
 		<key>Inactive Color (Selected)</key>
-		<string>#eee</string>
+		<string>#586e75</string>
 		<key>Gradient</key>
 		<dict>
 			<key>Top Color</key>
-			<string>#3f3e4c</string>
+			<string>#586e75</string>
 			<key>Bottom Color</key>
-			<string>#201f27</string>
+			<string>#073642</string>
 			<key>Top Line Color</key>
-			<string>#3f3e4c</string>
+			<string>#073642</string>
 			<key>Bottom Line Color</key>
-			<string>#3f3e4c</string>
+			<string>#586e75</string>
 		</dict>
 	</dict>
 	<key>Member List</key>
 	<dict>
 		<key>Text Font Style</key>
-		<string>Lucida Grande</string>
+		<string>Helvetica Neue</string>
 		<key>Text Font Size</key>
-		<integer>11</integer>
+		<integer>12</integer>
 		<key>Background Color</key>
-		<string>#1c1c1c</string>
+		<string>#002b36</string>
 		<key>Text Color</key>
-		<string>#808080</string>
+		<string>#b58900</string>
 		<key>Op Text Color</key>
-		<string>#dedede</string>
+		<string>#cb4b16</string>
 		<key>Text Color (Selected)</key>
-		<string>#cfbc99</string>
+		<string></string>
 		<key>Gradient</key>
 		<dict>
 			<key>Top Color</key>
-			<string>#3f3e4c</string>
+			<string>#586e75</string>
 			<key>Bottom Color</key>
-			<string>#201f27</string>
+			<string>#073642</string>
 			<key>Top Line Color</key>
-			<string>#3f3e4c</string>
+			<string>#073642</string>
 			<key>Bottom Line Color</key>
-			<string>#3f3e4c</string>
+			<string>#586e75</string>
 		</dict>
 	</dict>
 	<key>Input Box</key>
@@ -71,9 +71,9 @@
 		<key>Text Font Size</key>
 		<integer>0</integer>
 		<key>Background Color</key>
-		<string>#1c1c1c</string>
+		<string>#002b36</string>
 		<key>Text Color</key>
-		<string>#e4e4e4</string>
+		<string>#839496</string>
 	</dict>
 </dict>
 </plist>

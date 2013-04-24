@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Nickname Format</key>
-	<string></string>
+	<string>%@%n</string>
 	<key>Nickname Format Fixed Width</key>
 	<integer>0</integer>
 	<key>Timestamp Format</key>
@@ -15,12 +15,12 @@
 		<key>New Value</key>
 		<false/>
 	</dict>
-	<key>Override Channel Font</key>
+	<!-- <key>Override Channel Font</key>
 	<dict>
 		<key>Font Name</key>
 		<string></string>
 		<key>Font Size</key>
 		<integer>0</integer>
-	</dict>
+	</dict> -->
 </dict>
 </plist>

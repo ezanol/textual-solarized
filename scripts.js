@@ -13,11 +13,25 @@
 
 
 // Functions called for contextual menus used within WebView
-// DO NOT change without knowledge of what to do. 
-// Safe to remove from source code if not needed. 
+// DO NOT change without knowledge of what to do.
+// Safe to remove from source code if not needed.
 
 // Textual.on_url = function() { app.setUrl(event.target.innerHTML); }
 // Textual.on_addr = function() { app.setAddr(event.target.innerHTML); }
 // Textual.on_chname = function() { app.setChan(event.target.innerHTML); }
 // Textual.on_ct_nick: function() { app.setNick(event.target.innerHTML); }
 // Textual.on_nick = function() { app.setNick(event.target.parentNode.parentNode.getAttribute('nick')); }
+
+Textual.viewFinishedLoading = function()
+{
+    Textual.fadeInLoadingScreen(1.00, 0.95);
+
+    setTimeout(function() {
+        Textual.scrollToBottomOfView()
+    }, 500);
+}
+
+Textual.viewFinishedReload = function()
+{
+    Textual.viewFinishedLoading();
+}
