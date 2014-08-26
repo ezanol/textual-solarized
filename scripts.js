@@ -956,8 +956,8 @@ Textual.newMessagePostedToView = function (lineNum) {
     var line = document.querySelector("#line-" + lineNum + " > p > .message");
     if (line) {
         [].forEach.call(line.childNodes, function(element) {
-            if (element.className === 'time') return;
-            if (element.nodeName == "#text" || element.className == "effect") {
+            if (element && element.classList && element.classList.contains('time')) return;
+            if (element.nodeName == "#text" || element.classList.contains("effect")) {
                 element.textContent = element.textContent.replace(/:(\w+):/g, function (match, emoji) {
                     if (emojis.hasOwnProperty(emoji)) {
                         return emojis[emoji];
