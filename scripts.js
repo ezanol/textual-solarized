@@ -900,6 +900,12 @@ var asciimoji = {
     ";)": "😉",
     ";P": "😜",
     ":P": "😝",
+    ":-)": "😊",
+    ":-D": "😃",
+    ";-D": "😄",
+    ";-)": "😉",
+    ";-P": "😜",
+    ":-P": "😝",
     "o_o": "😳",
     "O_O": "😳",
     "o_O": "😳",
@@ -908,9 +914,11 @@ var asciimoji = {
     "0_0": "😳",
     "O_o": "😳",
     ":@": "😡",
+    ":-@": "😡",
     ">.<": "😣",
     ">_<": "😫",
     ":(": "😞",
+    ":-(": "😞",
     "n_n": "😄",
     "u_u": "😔",
     "^_^'": "😅",
@@ -928,29 +936,46 @@ var asciimoji = {
     "D:": "😧",
     ":s": "😖",
     ":S": "😖",
+    "DD-:": "😫",
+    "D-:": "😧",
+    ":-s": "😖",
+    ":-S": "😖",
     "._.'": "😰",
     "._.": "😞",
     ";_;": "😢",
     ";__;": "😢",
     "D;": "😰",
+    "D-;": "😰",
     "T_T": "😭",
     "T.T": "😭",
     ":|": "😐",
     ":o": "😯",
     ":O": "😱",
     ":0": "😱",
+    ":-|": "😐",
+    ":-o": "😯",
+    ":-O": "😱",
+    ":-0": "😱",
     "-_-": "😑",
     ":***": "😘",
     ":**": "😘",
     ":*": "😚",
+    ":-***": "😘",
+    ":-**": "😘",
+    ":-*": "😚",
     "*_*": "😍",
-    ":/": "😕"
+    ":/": "😕",
+    ":-/": "😕",
+    ":\\": "😕",
+    ":-\\": "😕"
 };
 
 function getEmojiURL(emojiName) {
     var imgURL = 'http://emojihaik.us/emojis/' + emojiName + '.png';
     return imgURL;
 }
+
+var historyPattern = /^(.*\[\d+:\d+:\d+)/;
 
 Textual.newMessagePostedToView = function (lineNum) {
     var line = document.querySelector("#line-" + lineNum + " > p > .message");
@@ -964,10 +989,19 @@ Textual.newMessagePostedToView = function (lineNum) {
                     }
                     return match;
                 });
-                var i;
-                for (i in asciimoji) {
-                    while (element.textContent.indexOf(i) != -1) {
-                        element.textContent = element.textContent.replace(i, asciimoji[i]);
+                var emoticon, splitHistory;
+                for (emoticon in asciimoji) {
+                    if (element.textContent.indexOf(emoticon) !== -1) {
+                        splitHistory = element.textContent.split(historyPattern);
+                        if (splitHistory[0].match(/^\s+$/)) splitHistory.shift();
+                        if (splitHistory.length > 1) {
+                            if (splitHistory.length === 2) {
+                                splitHistory[1] = splitHistory[1].replace(emoticon, asciimoji[emoticon]);
+                                element.textContent = splitHistory.join('');
+                            }
+                        } else {
+                            element.textContent = element.textContent.replace(emoticon, asciimoji[emoticon]);
+                        }
                     }
                 }
             }
